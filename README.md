@@ -1,7 +1,13 @@
 # vim-env
 整合了vim-go、智能补全、树形目录、gotags、ctrlp快速定位文件、mark标记变量等插件。
 
-vim：
+1.How to install vim plugins?
+sh install.sh
+这个一键安装脚本在CentOS 7正常运行，其他希望理论上可以，有一些不兼容：
+neocomplete：智能补全需要vim支持lua插件,查看方法：打开vi，输入:version，若显示-lua，则说明没有lua插件，不支持自动补全，但可以手动补全,快捷键为Ctrl + X, Ctrl + O
+gotags：在Mac有点不正常，需要安装linux版本的ctags
+
+2.How to use shortcut key？
 
 ps:SecureCRT的F7/F8键会失效,可以自己修改快捷键
 
