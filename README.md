@@ -29,21 +29,21 @@ mn：跳转到下一个高亮（目前不可用）
 ctrl + p ：快速定位文件  
   
 Go命令：  
-– 执行:GoLint，运行golint在当前Go源文件上。  
-– 执行:GoDoc，打开当前光标对应符号的Go文档。  
-– 执行:GoVet，在当前目录下运行go vet在当前Go源文件上。  
-– 执行:GoRun，编译运行当前main package。  
-– 执行:GoBuild，编译当前包，这取决于你的源文件，GoBuild不产生结果文件。  
-– 执行:GoInstall，安装当前包。  
-– 执行:GoTest，测试你当前路径下地\_test.go文件。  
-– 执行:GoCoverage，创建一个测试覆盖结果文件，并打开浏览器展示当前包的情况。  
-– 执行:GoErrCheck，检查当前包种可能的未捕获的errors。  
-– 执行:GoFiles，显示当前包对应的源文件列表。  
-– 执行:GoDeps，显示当前包的依赖包列表。  
-– 执行:GoImplements，显示当前类型实现的interface列表。  
-– 执行:GoRename [to]，将当前光标下的符号替换为[to]。  
+- 执行:GoLint，运行golint在当前Go源文件上。  
+- 执行:GoDoc，打开当前光标对应符号的Go文档。  
+- 执行:GoVet，在当前目录下运行go vet在当前Go源文件上。  
+- 执行:GoRun，编译运行当前main package。  
+- 执行:GoBuild，编译当前包，这取决于你的源文件，GoBuild不产生结果文件。  
+- 执行:GoInstall，安装当前包。  
+- 执行:GoTest，测试你当前路径下地\_test.go文件。  
+- 执行:GoCoverage，创建一个测试覆盖结果文件，并打开浏览器展示当前包的情况。  
+- 执行:GoErrCheck，检查当前包种可能的未捕获的errors。  
+- 执行:GoFiles，显示当前包对应的源文件列表。  
+- 执行:GoDeps，显示当前包的依赖包列表。  
+- 执行:GoImplements，显示当前类型实现的interface列表。  
+- 执行:GoRename [to]，将当前光标下的符号替换为[to]。  
 - 执行:GoDebug 调试  
 - 执行:GoDebugBreakpoint 设置断点  
-- 还有很多命令，自己摸索  
+- 还有很多命令，需要在使用的时候再摸索  
 
 
