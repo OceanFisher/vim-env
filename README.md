@@ -14,6 +14,8 @@ ps:SecureCRT的F7/F8键会失效,可以自己修改快捷键
   
 F7：打开树形目录  
 	ctrl + w + w：在目录和文件切换光标  
+	ctrl + w + l: 向右切换窗口  
+	ctrl + w + h: 向左切换窗口  
   
 F8：打开gotags窗口  
 	gd 跳转到声明  
@@ -44,7 +46,27 @@ Go命令：
 - 执行:GoImplements，显示当前类型实现的interface列表。  
 - 执行:GoRename [to]，将当前光标下的符号替换为[to]。  
 - 执行:GoDebug 调试  
-- 执行:GoDebugBreakpoint 设置断点  
+- 执行:GoDebugBreakpoint设置断点  
 - 还有很多命令，需要在使用的时候再摸索  
 
+# 3.How to use nerdtree mapping key?
+只列出比较常用的快捷键，更多快捷键可参考:plugin/dotvim/bundle/nerdtree/doc/NERDTree.txt
+- o: 打开文件
+- go: 不离开nerdtree焦点打开文件
+- i: 上下窗口显示文件
+- gi: 不离开nerdtree焦点的i
+- s: 左右分隔窗口显示文件
+- gs: 不离开nerdtree焦点的
+- u: 往上一层目录
+- O: 递归展开目录
+- X: 递归收缩目录
+- P: 到达根目录
+- p: 到达当前的根目录
+- C: 改变当前目录
+- r: 刷新
+- R: 递归刷新
+- q: 关闭tree窗口
 
+# 4.Vi shortcut key
+- :!cmd: 不关闭文件执行shell命令
+- Ctrl + G/:f: 显示当前文件名

@@ -4,8 +4,9 @@ filetype plugin on                  " 必须要添加
 syntax on
 set nu
 
-" 启动vi自动开启树形目录
+" 树形目录
 " autocmd VimEnter * NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " 快捷键
 nmap <F7> :NERDTreeToggle<CR>
