@@ -3,6 +3,7 @@ set nocompatible              " 去除VI一致性,必须要添加
 filetype plugin on                  " 必须要添加
 syntax on
 set nu
+set backspace=indent,eol,start " 修复backspace不能删除的问题
 
 " 树形目录
 " autocmd VimEnter * NERDTree
@@ -26,8 +27,9 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 
 " 自动补全，vim需要支持lua
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#sources#syntax#min_keyword_length = 1
+let g:neocomplete#enable_at_startup = 1 " 打开vi自动打开自动补全
+let g:neocomplete#sources#syntax#min_keyword_length = 1 " 输入1个字母就匹配补全
+let g:neocomplete#enable_smart_case = 1 " 大小写不敏感
 
 " 目录树
 let NERDTreeShowBookmarks=1
