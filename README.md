@@ -19,7 +19,8 @@ F7：打开树形目录
   
 F8：打开gotags窗口  
 	gd 跳转到声明  
-	ctrl + 9 返回上一步  
+	ctrl + o 跳转上一步  
+	tab 跳转到历史的下一步
   
 neocomplete需要vim支持lua才可以，vim8默认支持  
 ctrl + x, ctrl + o：自动补全  
@@ -70,3 +71,39 @@ Go命令：
 # 4.Vi shortcut key
 - :!cmd: 不关闭文件执行shell命令
 - Ctrl + G/:f: 显示当前文件名
+
+# 5.批量注释和反注释
+第一种方法  
+  
+批量插入字符快捷键：  
+Ctrl+v进入VISUAL BLOCK（可视块）模式，按 j （向下选取列）或者 k （向上选取列），再按Shift + i 进入编辑模式然后输入你想要插入的字符（任意字符），再按两次Esc就可以实现批量插入字符，不仅仅实现批量注释而已。  
+  
+批量删除字符快捷键：  
+Ctrl+v进入VISUAL BLOCK（可视块）模式，按 j （向下选取列）或者 k （向上选取列），直接（不用进入编辑模式）按 x 或者 d 就可以直接删去，再按Esc退出。  
+  
+第二种方法  
+  
+批量插入字符快捷键：命令行模式下，输入 " : 首行号，尾行号 s /^/字符/g "实现批量插入字符。如 输入:2,7 s/^/A/g，在2到7行首插入A  
+  
+批量删除字符快捷键：命令行模式下，输入 " : 首行号，尾行号 s /^字符//g "实现批量删除字符。如 输入:2,7 s/^A//g，在2到7行首删除A  
+
+# 6.搜索列表
+输入:vimgrep /pattern/ %  
+搜索当前文件所有pattern字符串的位置  
+  
+直接调整到第2个搜索结果  
+:cc 2  
+  
+打开搜索列表,可用Ctrl+W,W切换窗口  
+:copen  
+
+# 7.cscope添加go支持
+目前支持不好  
+find . -name "\*.go" > cscope.files  
+cscope -bkq -i cscope.files  
+  
+打开vi输入:cs add cscope.out  
+  
+快捷键为:Ctrl + \,[c,s,f,t]  
+  
+打开vi输入:cs 查看帮助  
