@@ -68,9 +68,47 @@ Go命令：
 - R: 递归刷新
 - q: 关闭tree窗口
 
-# 4.Vi shortcut key
+# 4.Vi快捷键
+## 4.1 普通命令
 - :!cmd: 不关闭文件执行shell命令
 - Ctrl + G/:f: 显示当前文件名
+
+## 4.2 翻页快捷键
+- z回车 将光标所在行移动到屏幕顶端作为预览
+- Ctrl+f 往前滚动一整屏 
+- Ctrl+b 往后滚动一整屏 
+- Ctrl+d 往前滚动半屏 
+- Ctrl+u 往后滚动半屏
+- Ctrl+e 往后滚动一行 
+- Ctrl+y 往前滚动一行
+
+## 4.3 光标移动快捷键
+- h Move left
+- j Move down
+- k Move up
+- l Move right
+- w Move to next word
+- W Move to next blank delimited word
+- b Move to the beginning of the word
+- B Move to the beginning of blank delimted word
+- e Move to the end of the word
+- E Move to the end of Blank delimited word
+- ( Move a sentence back
+- ) Move a sentence forward
+- { Move a paragraph back
+- } Move a paragraph forward
+- 0 Move to the begining of the line
+- $ Move to the end of the line
+- 1G Move to the first line of the file
+- G Move to the last line of the file
+- nG Move to nth line of the file
+- :n Move to nth line of the file
+- fc Move forward to c
+- Fc Move back to c
+- H Move to top of screen
+- M Move to middle of screen
+- L Move to botton of screen
+- % Move to associated ( ), { }, [ ]
 
 # 5.批量注释和反注释
 第一种方法  
@@ -89,7 +127,7 @@ Ctrl+v进入VISUAL BLOCK（可视块）模式，按 j （向下选取列）或�
 
 # 6.搜索列表
 输入:vimgrep /pattern/ %  
-搜索当前文件所有pattern字符串的位置  
+搜索目录所有文件出现pattern字符串的位置  
   
 直接调整到第2个搜索结果  
 :cc 2  

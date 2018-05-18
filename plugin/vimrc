@@ -2,7 +2,8 @@ execute pathogen#infect()
 set nocompatible              " 去除VI一致性,必须要添加
 filetype plugin on                  " 必须要添加
 syntax on
-set nu
+set nu " 显示行号
+set ic " 搜索大小写不敏感
 set backspace=indent,eol,start " 修复backspace不能删除的问题
 
 " 树形目录
@@ -19,12 +20,30 @@ nmap mp <Plug>MarkSearchAnyPrev
 nmap mf <Plug>MarkSearchCurrentNext #跳转到当前高亮的下一个单词
 nmap mb <Plug>MarkSearchCurrentPrev
 
-" golang高亮
+" vim-go支持golang高亮全部开启
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
+
+let g:go_highlight_array_whitespace_error = 1
+let g:go_highlight_chan_whitespace_error = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_space_tab_error = 1
+let g:go_highlight_trailing_whitespace_error = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_arguments = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_generate_tags = 1
+let g:go_highlight_string_spellcheck = 1
+let g:go_highlight_format_strings = 1
+let g:go_highlight_variable_declarations = 1
+let g:go_highlight_variable_assignments = 1
 
 " 自动补全，vim需要支持lua
 let g:neocomplete#enable_at_startup = 1 " 打开vi自动打开自动补全
