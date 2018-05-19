@@ -30,27 +30,28 @@ gotags：在Mac有点不正常，需要安装linux版本的ctags(Mac使用Homebr
 <h2 id="2.howto-use-shortcut-key">2.如何使用快捷键？</h2>
   
 <h3 id="2.1.viide-shortkey">2.1.VI IDE 快捷键</h3>
+
 ps:SecureCRT的F7/F8键会失效,可以自己修改快捷键  
   
 F7：打开树形目录  
-	ctrl + w + w：在目录和文件切换光标  
-	ctrl + w + l: 向右切换窗口  
-	ctrl + w + h: 向左切换窗口  
+	Ctrl + w + w：在目录和文件切换光标  
+	Ctrl + w + l: 向右切换窗口  
+	Ctrl + w + h: 向左切换窗口  
   
-F8：打开gotags窗口  
-	gd 跳转到声明  
-	ctrl + o 跳转上一步  
-	tab 跳转到历史的下一步
+F8：打开Gotags窗口  
+	gd / Ctrl + ] 跳转到声明  
+	Ctrl + o / Ctrl + T 返回原来的位置  
+	Tab 跳转到历史的下一步(配合Ctrl + o使用)
   
 neocomplete需要vim支持lua才可以，vim8默认支持  
-ctrl + x, ctrl + o：自动补全  
+Ctrl + x, Ctrl + o：自动补全  
   
 ml ：高亮  
 md: 删除所有高亮单词  
 mp：跳转到前一个高亮  
 mn：跳转到下一个高亮（目前不可用）  
   
-ctrl + p ：快速定位文件  
+Ctrl + p ：快速定位文件  
 
 <h3 id="2.2.vim-go-shortkey">2.2.vim-go 快捷键</h3>
 
@@ -75,6 +76,7 @@ Go命令：
 <h2 id="3.howto-use-nerdtree">3.如何使用nerdtree树形目录</h2>
 
 只列出比较常用的快捷键，更多快捷键可参考:plugin/dotvim/bundle/nerdtree/doc/NERDTree.txt
+
 - o: 打开文件
 - go: 不离开nerdtree焦点打开文件
 - i: 上下窗口显示文件
@@ -97,6 +99,9 @@ Go命令：
 
 - :!cmd: 不关闭文件执行shell命令
 - Ctrl + G/:f: 显示当前文件名
+- :ic 搜索大小写不敏感(ignorecase)
+- :noic 搜索大小写敏感
+- /\<int\> 全词搜索int
 
 <h3 id="4.2.page-shortkey">4.2.翻页快捷键</h3>
 
