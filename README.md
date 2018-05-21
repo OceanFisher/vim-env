@@ -34,28 +34,35 @@ gotags：在Mac有点不正常，需要安装linux版本的ctags(Mac使用Homebr
 ps:SecureCRT的F7/F8键会失效,可以自己修改快捷键  
   
 F7：打开树形目录  
-	Ctrl + w + w：在目录和文件切换光标  
-	Ctrl + w + l: 向右切换窗口  
-	Ctrl + w + h: 向左切换窗口  
+
+- Ctrl + w + w：在目录和文件切换光标  
+- Ctrl + w + l: 向右切换窗口  
+- Ctrl + w + h: 向左切换窗口  
   
 F8：打开Gotags窗口  
-	gd / Ctrl + ] 跳转到声明  
-	Ctrl + o / Ctrl + T 返回原来的位置  
-	Tab 跳转到历史的下一步(配合Ctrl + o使用)
+
+- gd / Ctrl + ] 跳转到声明  
+- Ctrl + o / Ctrl + T 返回原来的位置  
+- Tab 跳转到历史的下一步(配合Ctrl + o使用)
+- Shift + K 打开函数或变量声明，Esc关闭声明窗口
   
 neocomplete需要vim支持lua才可以，vim8默认支持  
-Ctrl + x, Ctrl + o：自动补全  
-  
-ml ：高亮  
-md: 删除所有高亮单词  
-mp：跳转到前一个高亮  
-mn：跳转到下一个高亮（目前不可用）  
+
+- Ctrl + x, Ctrl + o：自动补全  
+
+Mark.vim标记
+
+- ml ：高亮  
+- md: 删除所有高亮单词  
+- mp：跳转到前一个高亮  
+- mn：跳转到下一个高亮（目前不可用）  
   
 Ctrl + p ：快速定位文件  
 
 <h3 id="2.2.vim-go-shortkey">2.2.vim-go 快捷键</h3>
 
 Go命令：  
+
 - 执行:GoLint，运行golint在当前Go源文件上。  
 - 执行:GoDoc，打开当前光标对应符号的Go文档。  
 - 执行:GoVet，在当前目录下运行go vet在当前Go源文件上。  
@@ -141,6 +148,34 @@ Go命令：
 - M Move to middle of screen
 - L Move to botton of screen
 - % Move to associated ( ), { }, [ ]
+
+<h3 id="4.4.moveline">4.4.行操作</h3>
+
+1.剪切操作
+
+```
+dd //剪切当前行
+p //往下粘贴
+P //往上粘贴
+```
+
+2.移动操作(剪切操作)
+
+```
+23,25 move 27 //将23到25行移动到27行的位置
+```
+
+3.复制操作
+
+```
+23,30 move 50 //将23到30行复制到50行的位置
+```
+
+4.删除操作
+
+```
+23,30 del
+```
 
 <h2 id="5.comment">5.批量注释和反注释</h2>
 
