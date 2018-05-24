@@ -243,7 +243,9 @@ Ctrl+v进入VISUAL BLOCK（可视块）模式，按 j （向下选取列）或�
 ```
 在2到7行首删除A  
 
-<h2 id="6.searchlist">6.搜索列表</h2>
+<h2 id="6.searchlist">6.搜索字符串</h2>
+
+<h3 id="6.1.search-current-file">6.1.当前文件搜索</h3>
 
 输入
 
@@ -263,6 +265,20 @@ Ctrl+v进入VISUAL BLOCK（可视块）模式，按 j （向下选取列）或�
 
 ```
 :copen  
+```
+
+<h3 id="6.2.search-global-file">6.2.搜索全局文件</h3>
+
+**1.快捷键方式**
+
+选中单词，输入快捷键：Ctrl + \, t
+
+**2.命令方式**
+
+打开vi，假设搜索hello，输入：
+
+```
+:cs find t "hello"
 ```
 
 <h2 id="7.cscope-support-go">7.cscope添加go支持</h2>
