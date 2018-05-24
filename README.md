@@ -48,7 +48,11 @@ F8：打开Gotags窗口
   
 neocomplete需要vim支持lua才可以，vim8默认支持  
 
-- Ctrl + x, Ctrl + o：自动补全  
+- Ctrl + x, Ctrl + o：自动补全
+- Ctrl+P	向前切换成员
+- Ctrl+N	向后切换成员
+- Ctrl+E	表示退出下拉窗口, 并退回到原来录入的文字
+- Ctrl+Y	表示退出下拉窗口, 并接受当前选项
 
 Mark.vim标记
 
