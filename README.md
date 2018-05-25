@@ -281,6 +281,20 @@ Ctrl+v进入VISUAL BLOCK（可视块）模式，按 j （向下选取列）或�
 :cs find t "hello"
 ```
 
+<h3 id="6.3.search-all-word">6.3.全词匹配快捷键</h3>
+
+**1.命令**
+
+全词匹配搜索hello
+
+```
+/\<hello\>
+```
+
+**2.快捷键**
+
+光标所在的单词，按*号，也就是Shift+8直接全词搜索
+
 <h2 id="7.cscope-support-go">7.cscope添加go支持</h2>
 
 目前支持不好  
