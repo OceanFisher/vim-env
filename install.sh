@@ -1,4 +1,4 @@
-yum install vim ctags cscope
+yum install -y vim ctags cscope
 yum erase vim-minimal
 
 cp ./plugin/mcepl-vim8-epel-7.repo /etc/yum.repos.d/
