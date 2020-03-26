@@ -4,6 +4,7 @@
 
 ## 目录
 *   [1.如何安装插件?](#1.howto-install-vimplugins)
+	*   [1.1.安装Vim8](#1.1.install-vim8)
 *   [2.如何使用快捷键？](#2.howto-use-shortcut-key)
 	*   [2.1.VI IDE 快捷键](#2.1.viide-shortkey)
 	*   [2.2.vim-go 快捷键](#2.2.vim-go-shortkey)
@@ -26,6 +27,75 @@ sh install.sh
 neocomplete：智能补全需要vim支持lua插件,查看方法：  
 打开vi，输入:version，若显示-lua，则说明没有lua插件，不支持自动补全，但可以手动补全,快捷键为Ctrl + X, Ctrl + O  
 gotags：在Mac有点不正常，需要安装linux版本的ctags(Mac使用Homebrew install ctags)  
+
+<h3 id="1.1.install-vim8">1.1.安装Vim8</h3>
+
+使用install.sh脚本已经无法安装Vim8，这里提供了手动编译Vim8支持lua插件的方法。
+
+- 安装luajit
+
+```shell
+# wget http://luajit.org/download/LuaJIT-2.0.4.tar.gz
+# tar zxvf LuaJIT-2.0.4.tar.gz
+# cd LuaJIT-2.0.4
+# make
+# make install
+# ln -s /usr/local/lib/libluajit-5.1.so.2.0.4 /lib/libluajit-5.1.so.2
+# ln -s /usr/local/include/luajit-2.0 /usr/include/luajit-2.0
+```
+
+- 安装Vim8
+
+```shell
+# wget https://github.com/vim/vim/archive/v8.2.0400.tar.gz
+# tar zxvf v8.2.0400.tar.gz
+# cd v8.2.0400
+# ./configure --prefix=/usr/local/vim8 --enable-luainterp=yes --with-luajit --enable-cscope --enable-fail-if-missing
+# make
+# make install
+```
+
+- 配置Vim8环境变量
+
+```shell
+# echo "export PATH=/usr/local/vim8/bin/:$PATH" >> ~/.bashrc
+# sourc ~/.bashrc
+```
+
+- 测试Vim8是否安装lua插件
+
+```
+打开vim，输入:version，回车，若出现+lua，说明安装成功
+:version
+VIM - Vi IMproved 8.2 (2019 Dec 12, compiled Mar 26 2020 14:27:50)
+Included patches: 1-400
+Compiled by root@VM_0_3_centos
+Huge version without GUI.  Features included (+) or not (-):
++acl               +cursorshape       +jumplist          +mouse_xterm       +smartindent       +vertsplit
++arabic            +dialog_con        +keymap            +multi_byte        -sound             +virtualedit
++autocmd           +diff              +lambda            +multi_lang        +spell             +visual
++autochdir         +digraphs          +langmap           -mzscheme          +startuptime       +visualextra
+-autoservername    -dnd               +libcall           +netbeans_intg     +statusline        +viminfo
+-balloon_eval      -ebcdic            +linebreak         +num64             -sun_workshop      +vreplace
++balloon_eval_term +emacs_tags        +lispindent        +packages          +syntax            +wildignore
+-browse            +eval              +listcmds          +path_extra        +tag_binary        +wildmenu
+++builtin_terms    +ex_extra          +localmap          -perl              -tag_old_static    +windows
++byte_offset       +extra_search      +lua               +persistent_undo   -tag_any_white     +writebackup
++channel           -farsi             +menu              +popupwin          -tcl               -X11
++cindent           +file_in_path      +mksession         +postscript        +termguicolors     -xfontset
+-clientserver      +find_in_path      +modify_fname      +printer           +terminal          -xim
+-clipboard         +float             +mouse             +profile           +terminfo          -xpm
++cmdline_compl     +folding           -mouseshape        -python            +termresponse      -xsmp
++cmdline_hist      -footer            +mouse_dec         -python3           +textobjects       -xterm_clipboard
++cmdline_info      +fork()            -mouse_gpm         +quickfix          +textprop          -xterm_save
++comments          +gettext           -mouse_jsbterm     +reltime           +timers
++conceal           -hangul_input      +mouse_netterm     +rightleft         +title
++cryptv            +iconv             +mouse_sgr         -ruby              -toolbar
++cscope            +insert_expand     -mouse_sysmouse    +scrollbind        +user_commands
++cursorbind        +job               +mouse_urxvt       +signs             +vartabs
+   system vimrc file: "$VIM/vimrc"
+```
+
  
 <h2 id="2.howto-use-shortcut-key">2.如何使用快捷键？</h2>
   
